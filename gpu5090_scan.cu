@@ -91,7 +91,13 @@ int main(int argc, char** argv)
     if(e <= s){ fprintf(stderr, "Bad range\n"); return 1; }
 
     // hash160 țintă = 0 (demo). Înlocuiește cu decodarea adresei Base58.
-    uint32_t tgt[5] = {0, 0, 0, 0, 0};
+    uint32_t tgt[5] = {
+    0x1d43f5f6,
+    0xb1f7bb25,
+    0x9add8a2e,
+    0x5c47e3f5,
+    0xb8a5a044
+};
 
     unsigned long long *dHit;
     cudaMalloc(&dHit, 8);
